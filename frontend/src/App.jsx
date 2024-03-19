@@ -27,7 +27,7 @@ function App() {
         element={isAuthenticatedAndValidToken() ? <Dashboard /> : <Navigate to="/auth/sign-in" replace />}
       />
       <Route path="/auth/*" element={<Auth />} />
-      <Route path="*" element={<Navigate to="/dashboard/tables" replace />} />
+      <Route path="*" element={<Navigate to="/dashboard/tasks" replace />} />
     </Routes>
   );
 }

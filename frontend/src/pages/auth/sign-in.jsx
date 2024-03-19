@@ -29,7 +29,7 @@ export function SignIn() {
         localStorage.setItem('userId', data.user._id);
         console.log(data.user)
         toast.success(response.message, { position: 'top-right' });
-        window.location.href = '/dashboard/tables';
+        window.location.href = '/dashboard/tasks';
 
       } else {
         // Nếu status code là 4xx hoặc 5xx, trả về true và thông báo lỗi
@@ -45,7 +45,7 @@ export function SignIn() {
   // useEffect(() => {
   //   const token = localStorage.getItem('token');
   //   if (token) {
-  //     window.location.href = '/dashboard/tables';
+  //     window.location.href = '/dashboard/tasks';
   //   }
 
   // }, []);

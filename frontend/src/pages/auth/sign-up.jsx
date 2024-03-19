@@ -50,7 +50,7 @@ export function SignUp() {
   // useEffect(() => {
   //   const token = localStorage.getItem('token');
   //   if (token) {
-  //     window.location.href = '/dashboard/tables';
+  //     window.location.href = '/dashboard/tasks';
   //   }
 
   // }, []);

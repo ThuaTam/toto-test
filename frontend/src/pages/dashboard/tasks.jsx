@@ -19,7 +19,7 @@ import { Dialog, Transition, Listbox } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { createTask, deleteTask, findTask, getAllTask, updateTask } from "@/api/api";
 import { toast, ToastContainer } from 'react-toastify';
-
+import moment from 'moment';
 
 export function Tables() {
   const statusTak = [
@@ -69,7 +69,7 @@ export function Tables() {
     let data = {
       title: createdTaskdata?.title,
       description: createdTaskdata?.description,
-      data: new Date(),
+      date: new Date(),
       status: selected.name,
       user: userId
     }
@@ -283,7 +283,7 @@ export function Tables() {
                       </td>
                       <td className={className}>
                         <Typography className="text-xs font-semibold text-blue-gray-600">
-                          {item.date}
+                          {moment(item?.date).format('DD/MM/YYYY HH:mm:ss')}
                         </Typography>
                       </td>
                       <td className={className}>

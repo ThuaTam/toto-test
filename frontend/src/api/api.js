@@ -3,13 +3,6 @@ async function createTask(data, token) {
     myHeaders.append("Authorization", token);
     myHeaders.append("Content-Type", "application/json");
 
-    const raw = JSON.stringify({
-        "title": "cawt html",
-        "description": "cawt html",
-        "status": "todo",
-        "date": "2024-03-16T15:27:09.536Z",
-        "user": "65f5ba4e9fd7a92b06a5dff1"
-    });
 
     const requestOptions = {
         method: "POST",
